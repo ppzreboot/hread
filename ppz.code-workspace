@@ -14,7 +14,14 @@
         {
             "path": "port/voice",
             "name": "Port: Voice"
-        }
+        },
+        {
+            "path": "service/polly",
+            "name": "Service: Polly",
+            "settings": {
+                "deno.enable": true,
+            },
+        },
     ],
     "settings": {}
 }

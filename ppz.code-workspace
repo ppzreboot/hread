@@ -1,0 +1,20 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "Workspace Root"
+        },
+        {
+            "path": "mnb",
+            "name": "Main & Build"
+        },
+        {
+            "path": "app",
+        },
+        {
+            "path": "port/voice",
+            "name": "Port: Voice"
+        }
+    ],
+    "settings": {}
+}

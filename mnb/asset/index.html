@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>手读</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script src="main.js"></script>
+    <script>
+        const app = Elm.Main.init({
+            node: document.getElementById('app')
+        })
+    </script>
+
+    <script type="module">
+        const port_list = [
+            'voice'
+        ]
+
+        // init 的时机，可以再考虑考虑: https://discourse.elm-lang.org/t/when-can-msg-be-sent-to-elm-through-port/10428
+        document.addEventListener('DOMContentLoaded', init_ports)
+        async function init_ports() {
+            for (const port_name of port_list)
+                import(`./port/${port_name}/mod.js`)
+                    .then(mod => mod.default(app.ports))
+        }
+    </script>
+</body>
+</html>

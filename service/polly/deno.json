@@ -1,5 +1,9 @@
 {
   "imports": {
     "@aws-sdk/client-polly": "npm:@aws-sdk/client-polly@^3.882.0"
+  },
+  "deploy": {
+    "org": "handread",
+    "app": "hread"
   }
 }

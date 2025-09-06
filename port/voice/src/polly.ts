@@ -3,7 +3,7 @@ import { PollyClient, SynthesizeSpeechCommand } from '@aws-sdk/client-polly'
 export
 function init_polly(key_id: string, key_secret: string) {
     const polly_client = new PollyClient({
-        region: 'ap-north-east-1',
+        region: 'ap-northeast-1',
         credentials: {
             accessKeyId: key_id,
             secretAccessKey: key_secret,

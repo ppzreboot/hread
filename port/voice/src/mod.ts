@@ -15,7 +15,7 @@ interface I_elm_ports {
 
 export default
 function init_voice_port(ports: I_elm_ports) {
-    // const polly = init_polly('', '')
+    const polly = init_polly('', '')
     ports.synthesize_speech.subscribe(async text => {
         console.log('received job to synthesize:', text)
         const synthesized = await polly.synthesize(text)

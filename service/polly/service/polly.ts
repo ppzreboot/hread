@@ -8,7 +8,7 @@ function init_polly() {
         throw Error('missing AWS_POLLY_KEY or AWS_POLLY_SECRET env var')
 
     const polly_client = new PollyClient({
-        region: 'ap-north-east-1',
+        region: 'ap-northeast-1',
         credentials: {
             accessKeyId: key_id,
             secretAccessKey: key_secret,

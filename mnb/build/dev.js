@@ -21,7 +21,7 @@ function main() {
             name: 'Build Port: Voice',
             workspace_dir: workspace_dir('port/voice'),
             src_dir: 'src',
-            cmd: 'npm run build & mv ./dist ' + compiled_dir + '/port/voice',
+            cmd: 'npm run build & mv -f ./dist ' + compiled_dir + '/port/voice',
         },
         {
             name: 'Build Elm App',

@@ -19,7 +19,11 @@ function init_voice_port(ports: I_elm_ports) {
     ports.synthesize_speech.subscribe(async text => {
         console.log('received job to synthesize:', text)
         const synthesized = await polly.synthesize(text)
-        console.log('as', synthesized.AudioStream)
+        const voice_ba = await synthesized.AudioStream.transformToByteArray()
+        const blob = new Blob([voice_ba], { type: synthesized.ContentType })
+        const url = URL.createObjectURL(blob)
+        const audio = new Audio(url)
+        audio.play()
     })
     ports.polly_ready.send(1)
 }

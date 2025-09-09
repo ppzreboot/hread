@@ -1,4 +1,4 @@
-import { init_polly } from './polly.ts'
+import { init_polly } from './polly.js'
 
 type I_elm_port_publisher<M> = {
     subscribe: (callback: (msg: M) => void) => void

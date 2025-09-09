@@ -2,26 +2,23 @@
     "folders": [
         {
             "path": ".",
-            "name": "Workspace Root"
         },
         {
             "path": "mnb",
-            "name": "Main & Build"
         },
         {
             "path": "app",
         },
         {
             "path": "port/voice",
-            "name": "Port: Voice"
         },
         {
             "path": "service/polly",
-            "name": "Service: Polly",
             "settings": {
                 "deno.enable": true,
             },
         },
     ],
-    "settings": {}
+    "settings": {
+    },
 }

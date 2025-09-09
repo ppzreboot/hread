@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-polly": "^3.883.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9"
+  }
+}

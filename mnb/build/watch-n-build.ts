@@ -35,7 +35,7 @@ Watch Dir: ${src_dir}`)
         log.mod.inf(`Emit: ${mod.name}
 file changed: ${evt.paths}
 event type: ${evt.kind}`)
-        exec()
+        await exec() // 此处的 await 保证“同一个 watch，不存在并行的 build”
     }
 
     /** 执行模块任务 */
